@@ -9,7 +9,11 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
-  // Solution code here...
+  const localArray = [];
+  arr.forEach((number) => {
+    localArray.push(number + 1);
+  });
+  return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +25,10 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+  const localArray = [];
+  arr.forEach((string) => localArray.push(string +'!'));
+
+  return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,7 +40,9 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const localArray = [];
+  arr.forEach((string) => localArray.push(string.toUpperCase()));
+  return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,11 +56,13 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  return word.toUpperCase() + '!';
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  const newArray = [];
+  words.forEach(word => newArray.push(callback(word)));
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,11 +82,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,7 +111,11 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const localArray = [];
+  availableItems.forEach((item) => {
+    if (item.available) localArray.push(item.name);
+  });
+  return localArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,9 +132,9 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  // Solution code here...
-};
+//const fizzbuzz = (arr) => {
+// Solution code here...
+//};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -169,11 +187,11 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
-  const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+// xdescribe('Testing challenge 7', () => {
+//   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
-  test('It should print out messages or numbers', () => {
-    expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
-    expect(fizzbuzz(inputs).length).toStrictEqual(16);
-  });
-});
+//   test('It should print out messages or numbers', () => {
+//     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
+//     expect(fizzbuzz(inputs).length).toStrictEqual(16);
+//   });
+// });
