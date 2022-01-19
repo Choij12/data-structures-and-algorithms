@@ -90,6 +90,21 @@ class LinkedList {
       currentNode = currentNode.next;
     }
   }
+
+  kth(k) {
+    let currentNode = this.head;
+    for(let i = 1; 1 <= k; i++){
+      if (i === k) {
+        return currentNode.value;
+      } else {
+        if(currentNode.next === null) {
+          return 'Exception';
+        } else {
+          currentNode = currentNode.next;
+        }
+      }
+    }
+  }
 }
 
 let list = new LinkedList();
@@ -98,8 +113,10 @@ list.add('jacob');
 list.add(3);
 list.add('codefellows');
 list.add(13);
-list.insertAfter('jacob', 'choi');
+let kth = list.kth(-1);
 
+
+console.log(kth);
 console.log(JSON.stringify(list));
 
 
@@ -108,4 +125,4 @@ console.log(JSON.stringify(list));
 
 
 
-module.exports = LinkedList, Node;
+module.exports = { LinkedList, Node };

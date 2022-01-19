@@ -1,19 +1,62 @@
 'use strict';
 
 const { LinkedList, Node } = require('../linkedList.js');
+
 const supertest = require('supertest');
 
 
-describe('Testing linked list', () => {
+describe('Testing kth method of linked list', () => {
 
-  it('Should come back with a traversed string', async () => {
+  it('Where k is greater than the length of the linked list. Should come back as undefined.', async () => {
 
     let list = new LinkedList();
     list.add('test1');
     list.add('test2');
     list.add('test3');
-    console.log('************ TEST ************* ',list);
-    expect(list).toEqual({'head':{'value':'test1','next':{'value':'test2','next':{'value':'test3','next':null}}}});
+    let kth = list.kth(4);
+    console.log('test',kth);
+    expect(kth).toEqual('Exception');
+  });
 
+  it('Where k and the length of the list are the same. Should come back with test3.', async () => {
+
+    let list = new LinkedList();
+    list.add('test1');
+    list.add('test2');
+    list.add('test3');
+    let kth = list.kth(3);
+    console.log('test',kth);
+    expect(kth).toEqual('test3');
+  });
+
+  it('Where k is not a positive integer. Should come back as undefined.', async () => {
+
+    let list = new LinkedList();
+    list.add('test1');
+    list.add('test2');
+    list.add('test3');
+    let kth = list.kth(-1);
+    console.log('test',kth);
+    expect(kth).toEqual(undefined);
+  });
+
+  it('Where the linked list is of a size 1. Should come back with test1.', async () => {
+
+    let list = new LinkedList();
+    list.add('test1');
+    let kth = list.kth(1);
+    console.log('test',kth);
+    expect(kth).toEqual('test1');
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list. Should come back as undefined.', async () => {
+
+    let list = new LinkedList();
+    list.add('test1');
+    list.add('test2');
+    list.add('test3');
+    let kth = list.kth(2);
+    console.log('test',kth);
+    expect(kth).toEqual('test2');
   });
 });
