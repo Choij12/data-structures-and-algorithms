@@ -9,5 +9,11 @@
 - set current to equal head
 - declare a variable to count the length of the linked list
 - declare an empty array
+### Kth
 - traverse through linked list increasing the count variable with each loop until node. next == null and pushing values into an array.
 - length return array[(length-1) - K];
+### Zip
+- Set variables string to an empty string and i to 0. Used a while loop goes until both current nodes are null. When i is even, add node from link1 and when odd, add node from link 2. at the end of the loop add 1 to i. O(n)
+## UML 
+
+![](zip.png)
