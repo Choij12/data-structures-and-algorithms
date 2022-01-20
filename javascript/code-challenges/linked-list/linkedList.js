@@ -105,19 +105,34 @@ class LinkedList {
       }
     }
   }
+
+  zipLists(link1, link2) {
+    let string = '';
+    let i = 0;
+    let currentNode1 = link1.head;
+    let currentNode2 = link2.head;
+    while (currentNode1 || currentNode2) {
+      if (i % 2 === 0) {
+        string += `{${currentNode1.value}} -> `;
+        currentNode1 = currentNode1.next;
+      } else {
+        string += `{${currentNode2.value}} -> `;
+        currentNode2 = currentNode2.next;
+      }
+      i++;
+    }
+    string += 'null';
+    return string;
+  }
 }
 
 let list = new LinkedList();
 
-list.add('jacob');
-list.add(3);
-list.add('codefellows');
-list.add(13);
-let kth = list.kth(-1);
+let link1 = { head: { value: 1, next: {value: 3, next: { value: 5, next: null }}}};
+let link2 = { head: { value: 2, next: {value: 4, next: { value: 6, next: null }}}};
+let zip =list.zipLists(link1, link2);
+console.log(zip);
 
-
-console.log(kth);
-console.log(JSON.stringify(list));
 
 
 

@@ -1,7 +1,6 @@
 'use strict';
 
 const { LinkedList, Node } = require('../linkedList.js');
-
 const supertest = require('supertest');
 
 
@@ -58,5 +57,19 @@ describe('Testing kth method of linked list', () => {
     let kth = list.kth(2);
     console.log('test',kth);
     expect(kth).toEqual('test2');
+  });
+});
+
+describe('Testing the zipLists method of linked list', () => {
+
+  it('When both list are of equal lenght', async () => {
+
+    let list = new LinkedList();
+    let link1 = { head: { value: 1, next: {value: 3, next: { value: 5, next: null }}}};
+    let link2 = { head: { value: 2, next: {value: 4, next: { value: 6, next: null }}}};
+
+    let zippy = list.zipLists(link1, link2);
+    console.log('Test',zip);
+    expect(zip).toEqual('{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> null');
   });
 });
