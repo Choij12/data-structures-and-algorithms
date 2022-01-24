@@ -53,7 +53,7 @@ Output: boolean
 
 **Enqueue Method**
 
-Input: value   
+Input: value
 Output: none
 
 **Dequeue Method**
