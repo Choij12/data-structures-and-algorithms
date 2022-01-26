@@ -5,7 +5,7 @@ Create a stack class with push, pop, peek, and isEmpty methods. Create a queue c
 
 ## Inputs / Outputs
 
-### Stack   
+### Stack
 
 **Push Method**
 
@@ -61,7 +61,19 @@ Output: none
 Input: none  
 Output: value of removed node
 
-##  Code
+### Stack Queue Animal Shelter
+
+**Enqueue Method**
+
+Input: value
+Output: none
+
+Dequeue Method
+
+Input: none
+Output: value of removed node
+
+## Code 
 
 [stack](./module/stack.js)
 
@@ -71,8 +83,12 @@ Output: value of removed node
 
 [pseudo queue](./module/pseudoQueue.js)
 
+[stack-queue-animal-shelter](./module/animalShelter.js)
+
 ## Tests
 
 [Tests](./__tests__/test.js)
 
 [Pseudo Queue Test](./__tests__/pseudoTest.js)
+
+[animal-shelter-test](./__tests__/animalShelterTests.js)
