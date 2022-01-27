@@ -1,7 +1,10 @@
-# Stacks and Queues
+# Stack and Queue brackets
 
 ## Problem Domain
-Create a stack class with push, pop, peek, and isEmpty methods. Create a queue class with enqueue, dequeue, peek, and isEmpty methods.
+Write a function called validate brackets Arguments: string Return: boolean representing whether or not the brackets in the string are balanced There are 3 types of brackets:
+- Round Brackets: ()
+- Square Brackets: []
+- Curly Brackets: {}
 
 ## Inputs / Outputs
 
@@ -73,6 +76,7 @@ Dequeue Method
 Input: none
 Output: value of removed node
 
+
 ## Code 
 
 [stack](./module/stack.js)
@@ -85,6 +89,8 @@ Output: value of removed node
 
 [stack-queue-animal-shelter](./module/animalShelter.js)
 
+[stack-queue-brackets](./module/brackets.js)
+
 ## Tests
 
 [Tests](./__tests__/test.js)
@@ -92,3 +98,5 @@ Output: value of removed node
 [Pseudo Queue Test](./__tests__/pseudoTest.js)
 
 [animal-shelter-test](./__tests__/animalShelterTests.js)
+
+[stack-queue-brackets test](./__tests__/bracketTest.js)
