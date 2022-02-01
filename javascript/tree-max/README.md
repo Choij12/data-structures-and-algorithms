@@ -14,7 +14,13 @@
 ### Binary Search Tree
 - Create a Binary Search Tree class
 - This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
-
+- Find the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+***FindMax Method***
+- Input: Binary tree root
+- Output: none
+***FindMax Helper Method***
+- Input: none
+- Output: max value in binary tree
 ## Approach & EfficiencyArguments: 
 - value
 - Return: nothing
